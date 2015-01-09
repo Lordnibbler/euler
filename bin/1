@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+array = []
+(0...1000).step(3) { |i| array << i }
+(0...1000).step(5) { |i| array << i }
+
+total = array.uniq!.inject(&:+)
+puts "problem 1: #{total}"
