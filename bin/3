@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+
+#
+# @see http://math.stackexchange.com/questions/389675/largest-prime-factor-of-600851475143
+#
+def largest_prime_factor(n)
+  lpf = 2
+  while n > lpf do
+    if n % lpf == 0
+      n = n / lpf
+      lpf = 2
+    else
+      lpf += 1
+    end
+  end
+  lpf
+end
+
+p largest_prime_factor(600851475143)
